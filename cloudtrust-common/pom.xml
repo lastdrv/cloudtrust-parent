@@ -5,12 +5,17 @@
     <parent>
         <groupId>io.cloudtrust</groupId>
         <artifactId>cloudtrust-parent</artifactId>
-        <version>1.3.0</version>
+        <version>1.4.0</version>
     </parent>
 
     <artifactId>cloudtrust-common</artifactId>
     <description>Common tools for Cloudtrust components</description>
     <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -19,5 +24,20 @@
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- env variables for unit tests -->
+        <dependency>
+            <groupId>com.github.stefanbirkner</groupId>
+            <artifactId>system-rules</artifactId>
+            <version>1.18.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- lib for extended testing -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 </project>
